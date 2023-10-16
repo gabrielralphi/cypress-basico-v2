@@ -1,29 +1,44 @@
 # Testes automatizados com Cypress - Básico
 
-👋 Seja bem-vindo(a)!
+Testes automatizados para o sistema CAC - TAT (Central de Atendimento - TAT)
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+## Pré-requisitos
 
-## O que você vai aprender
+### Instalação:
+- git (versão 2.34.1)
+- Node.js (v16.13.2)
+- npm (8.3.2)
+- Google Chrome (versão 98.0.4758.80 (Official Build) (x86_64))
+- Visual Studio Code (1.64.0) ou alguma outra IDE de sua preferência
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+## Extensões
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+- Add only
+- Bracket Pair Color DLW
+- Cypress Snippets
+- Fold Plus
+- Material Icon Theme
 
-## Vamos começar?
+## Configurações extra
+Atualize o arquivo cypress.json conforme abaixo.
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+{
+  "pluginsFile": false,
+  "viewportHeight": 880,
+  "viewportWidth": 1280
+}
+
+## Abrindo o projeto
+
+Ao abrir o projeto em sua máquina, rode o comando abaixo:
+- npm install cypress@9.5.1 --save-dev
+
+## Rodar os testes
+
+- npx cypress open
+ou
+- Habilitar o NPM Scripts na árvore de arquivos e clicar no play em cy:open
 
 ___
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+
