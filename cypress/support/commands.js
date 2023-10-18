@@ -24,6 +24,18 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+const TRES_SEGUNDOS = 3000
+
+
+Cypress.Commands.add('fillFieldsUser', function() {
+
+    cy.get('#firstName').type('Gabriel')
+    cy.get('#lastName').type('Oliveira')
+    cy.get('#email').type('gabrielralphi@gmail.com')
+    
+    
+    
+})
 
 Cypress.Commands.add('fillFieldsMandatory', function() {
 
@@ -37,6 +49,7 @@ Cypress.Commands.add('fillFieldsMandatory', function() {
 
 Cypress.Commands.add('fillMandatoryFieldsAndSubmit', function() {
 
+    cy.clock()
     cy.get('#firstName').type('Gabriel')
     cy.get('#lastName').type('Oliveira')
     cy.get('#email').type('gabrielralphi@gmail.com')
@@ -45,6 +58,9 @@ Cypress.Commands.add('fillMandatoryFieldsAndSubmit', function() {
     cy.contains('button', 'Enviar').click()
 
     cy.get('.success').should('be.visible').contains('Mensagem enviada com sucesso.')
+    cy.tick(TRES_SEGUNDOS)
+    cy.get('.success')
+            .should('not.be.visible')
 })
 
 Cypress.Commands.add('politicaPrivacidade', function() {
